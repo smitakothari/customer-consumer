@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: http://localhost:9092
+        bindings:
+          notifications-in:
+            destination: customer-notification
+            contentType: application/json
+server:
+  port: 9003
