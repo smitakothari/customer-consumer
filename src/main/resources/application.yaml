@@ -4,9 +4,15 @@ spring:
       kafka:
         binder:
           brokers: http://localhost:9092
-        bindings:
-          notifications-in:
-            destination: customer-notification
-            contentType: application/json
+      bindings:
+        notification-in:
+          destination: customer-notification
+          contentType: application/json
+          produce.headerMode: raw
+#  datasource:
+#    url: jdbc:mysql://customer-poc-1.caoolz8i5ynf.us-east-1.rds.amazonaws.com:3306/customerpoc1
+#    driver-class-name: com.mysql.jdbc.Driver
+#    data-username: admin
+#    data-password: customerpoc
 server:
-  port: 9003
+  port: 9005

@@ -5,8 +5,8 @@ import org.springframework.messaging.SubscribableChannel;
 
 public interface CustomerNotificationStream {
 
-    String INPUT = "notifications-in";
+    String INPUT = "notification-in";
 
     @Input(INPUT)
-    SubscribableChannel inboundNotification();
+    SubscribableChannel inboundGwrRegistrationEvent();
 }
